@@ -28,9 +28,9 @@ func eventStreamer(w http.ResponseWriter, r *http.Request) {
 			fmt.Println("client disconnected")
 			return
 		default:
-			io.WriteString(w, "data: "+time.Now().Format("15:04:05")+"\n\n")
+			io.WriteString(w, "data: "+time.Now().Format("15:04:05.0000")+"\n\n")
 			time.Sleep(300 * time.Millisecond)
-			fmt.Print(".")
+			// fmt.Print(".")
 			w.(http.Flusher).Flush()
 		}
 	}
