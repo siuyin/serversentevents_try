@@ -1,1 +1,1 @@
-# serversentevents_try
+# Experiments with Server Sent Events
